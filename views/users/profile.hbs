@@ -1,0 +1,206 @@
+{{#if user}}
+<br><br>
+<style>
+    .form-control.form-control-clicked {
+        background-color: #ffffff;
+        border-color: #00f10f;
+        color: #073984;
+    }
+</style>
+<div class="container-lg">
+    <a href="/registered" class="btn btn-sm btn-dark">Back</a><br><br>
+    <div class="card">
+        <h4 class="text-center p-4">Your Details</h4>
+        <div class="card-body">
+            <form>
+                <div class="row g-2">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="form-label" for="exampleInputText">First Name</label>
+                            <input class="form-control" id="exampleInputText" value="{{user.fname}}" type="text"
+                                placeholder="First Name" readonly>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="form-label" for="exampleInputText">Last Name</label>
+                            <input class="form-control" id="exampleInputText" value="{{user.lname}}" type="text"
+                                placeholder="Last Name" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="inputDate">Birth Date</label>
+                    <input class="form-control" id="inputDate" type="date" value="{{user.dob}}" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="exampleInputemail">Age of the Student</label>
+                    <input class="form-control" id="exampleInputemail" type="number" value="{{user.age}}"
+                        placeholder="e.g, 10" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="exampleInputemail">Gender</label>
+                    <input class="form-control" id="exampleInputemail" type="text" value="{{user.Gender}}"
+                        placeholder="Gender" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="inputDate">Father's Name</label>
+
+                    <input class="form-control w-100" value="{{user.father}}" type="text"
+                        placeholder="Enter Your Father's Name" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="inputDate">Mother's Name</label>
+
+                    <input class="form-control w-100" value="{{user.mother}}" type="text"
+                        placeholder="Enter Your Mother's Name" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="inputDate">Occupation</label>
+                    <input class="form-control w-100" value="{{user.occ}}" type="text" placeholder="Enter Occupation"
+                        readonly>
+                </div>
+                <hr>
+                <h6 class="mb-3">Name of the guardian and address </h6>
+                <div class="form-group">
+                    <label class="form-label" for="">Guardian Name</label>
+                    <input class="form-control w-100" value="{{user.gname}}" type="text" placeholder="Enter Occupation"
+                        readonly>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="">Guardian Address</label>
+
+                    <textarea class="form-control w-100" type="text" placeholder="Guardian address"
+                        readonly>{{user.gaddress}}</textarea>
+                </div>
+
+                <div class="row g-2">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="form-label" for="">City</label>
+                            <input class="form-control" id="exampleInputText" value="{{user.gcity}}" type="text"
+                                placeholder="City" readonly>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="form-label" for="">State / Province</label>
+                            <input class="form-control" id="exampleInputText" value="{{user.gstate}}" type="text"
+                                placeholder="State / Province" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="">Country</label>
+                    <input class="form-control" id="exampleInputText" value="{{user.gcountry}}" type="text"
+                        placeholder="Country" readonly>
+                </div>
+
+
+                <hr>
+
+
+
+                <div class="form-group">
+                    <label class="form-label" for="exampleInputtelephone">Your Phone Number</label>
+                    <input class="form-control" id="exampleInputtelephone" value="{{user.mobile}}" type="tel"
+                        placeholder="+880 123 456 7890" readonly>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="exampleInputtelephone">Your Whatsapp Number</label>
+                    <input class="form-control" id="exampleInputtelephone" type="tel" value="{{user.whatsapp}}"
+                        placeholder="+880 123 456 7890" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="">Mother Tongue</label>
+                    <input class="form-control" id="exampleInputText" value="{{user.tongue}}" type="text"
+                        placeholder="Mother Tongue" readonly>
+                </div>
+
+
+
+                <hr>
+                <h6 class="mb-3">Your Residential Address </h6>
+                <div class="form-group">
+                    <label class="form-label" for="">Street Address</label>
+                    <textarea class="form-control w-100" type="text" placeholder=" address"
+                        readonly>{{user.address1}}</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="">Street Address Line 2</label>
+                    <textarea class="form-control w-100" type="text" placeholder="address">{{user.address2}}</textarea>
+                </div>
+
+                <div class="row g-2">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="form-label" for="">City</label>
+                            <input class="form-control" id="exampleInputText" value="{{user.city}}" type="text"
+                                placeholder="City" readonly>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="form-label" for="">State / Province</label>
+                            <input class="form-control" id="exampleInputText" value="{{user.state}}" type="text"
+                                placeholder="State / Province" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="">Postal / Zip Code</label>
+                    <input class="form-control" id="exampleInputText" value="{{user.zipcode}}" type="text"
+                        placeholder="Postal / Zip Code" readonly>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label class="form-label" for="">Student Email</label>
+                    <input class="form-control" id="exampleInputText" value="{{user.email}}" type="email"
+                        placeholder="Student Email" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="">Class in which admission sought</label>
+                    <input class="form-control" id="exampleInputText" value="{{user.admission}}" type="text"
+                        placeholder="Class in which admission sought" readonly>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="">Question Type</label>
+                    <input class="form-control" id="exampleInputText" value="{{user.qtype}}" type="text"
+                        placeholder="Class in which admission sought" readonly>
+                </div>
+
+
+
+
+
+
+
+
+
+            </form>
+        </div>
+    </div>
+    <a href="/signout" class="btn btn-danger mt-4 w-100 d-flex align-items-center justify-content-center"
+        type="submit">Logout
+        <svg class="bi bi-arrow-right-short" width="24" height="24" viewBox="0 0 16 16" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z">
+            </path>
+        </svg>
+    </a>
+</div>
+<br><br>
+
+{{/if}}

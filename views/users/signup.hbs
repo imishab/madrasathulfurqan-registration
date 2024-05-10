@@ -1,0 +1,311 @@
+<style>
+    .form-control.form-control-clicked {
+        background-color: #ffffff;
+        border-color: #00f10f;
+        color: #073984;
+    }
+
+    .line-input {
+        -webkit-transition-duration: 500ms;
+        transition-duration: 500ms;
+        padding: 0.5rem 1rem;
+
+        width: 100%;
+        font-size: 14px;
+        border: none;
+        border-bottom: 1px solid black;
+        /* Adjust color and thickness as needed */
+        outline: none;
+        /* Remove default focus outline */
+    }
+
+    /* Optional: Style placeholder text */
+    .line-input::placeholder {
+        color: gray;
+    }
+</style>
+<br><br>
+
+<div class="container-lg">
+    <div class="card">
+        <h4 class="text-center p-4">Registration Form</h4>
+        <div class="card-body">
+            <form action="/signup" enctype="multipart/form-data" method="POST" style="">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="form-label" for="exampleInputText">First Name</label>
+                            <input class="form-control" id="exampleInputText" name="fname" type="text"
+                                placeholder="First Name">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="form-label" for="exampleInputText">Last Name</label>
+                            <input class="form-control" id="exampleInputText" name="lname" type="text"
+                                placeholder="Last Name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="inputDate">Birth Date</label>
+                    <input class="form-control" id="inputDate" type="date" name="dob">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="exampleInputemail">Age of the Student</label>
+                    <input class="form-control" id="exampleInputemail" type="number" name="age" placeholder="e.g, 10">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="exampleInputemail">Gender</label>
+                    <select class="form-select form-control" id="defaultSelect" name="Gender"
+                        aria-label="Default select example">
+                        <option value="" selected disabled>Select Your Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="inputDate">Father's Name</label>
+
+                    <input class="form-control w-100" name="father" type="text" placeholder="Enter Your Father's Name">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="inputDate">Mother's Name</label>
+
+                    <input class="form-control w-100" name="mother" type="text" placeholder="Enter Your Mother's Name">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="inputDate">Occupation</label>
+                    <input class="form-control w-100" name="occ" type="text" placeholder="Enter Occupation">
+                </div>
+                <hr>
+                <h6 class="mb-3">Name of the guardian and address </h6>
+                <div class="form-group">
+                    <label class="form-label" for="">Guardian Name</label>
+                    <input class="form-control w-100" name="gname" type="text" placeholder="Enter Occupation">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="">Guardian Address</label>
+
+                    <textarea class="form-control w-100" name="gaddress" type="text"
+                        placeholder="Guardian address"></textarea>
+                </div>
+
+                <div class="row g-2">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="form-label" for="">City</label>
+                            <input class="form-control" id="exampleInputText" name="gcity" type="text"
+                                placeholder="City">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="form-label" for="">State / Province</label>
+                            <input class="form-control" id="exampleInputText" name="gstate" type="text"
+                                placeholder="State / Province">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="exampleInputemail">Country</label>
+                    <select class="form-select form-control" id="defaultSelect" name="gcountry"
+                        aria-label="Default select example">
+                        <option value="" selected disabled>Select Country</option>
+                        <option value="India">India</option>
+                        <option value="UAE">UAE</option>
+                    </select>
+                </div>
+
+
+
+                <hr>
+
+
+
+                <div class="form-group">
+                    <label class="form-label" for="exampleInputtelephone">Your Phone Number</label>
+                    <input class="form-control" id="exampleInputtelephone" name="mobile" type="tel"
+                        placeholder="+880 123 456 7890">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="exampleInputtelephone">Your Whatsapp Number</label>
+                    <input class="form-control" id="exampleInputtelephone" type="tel" name="whatsapp"
+                        placeholder="+880 123 456 7890">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="">Mother Tongue</label>
+                    <input class="form-control" id="exampleInputText" name="tongue" type="text"
+                        placeholder="Mother Tongue">
+                </div>
+
+
+
+                <hr>
+                <h6 class="mb-3">Your Residential Address </h6>
+                <div class="form-group">
+                    <label class="form-label" for="">Street Address</label>
+                    <textarea class="form-control w-100" name="address1" type="text" placeholder=" address"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="">Street Address Line 2</label>
+                    <textarea class="form-control w-100" name="address2" type="text" placeholder="address"></textarea>
+                </div>
+
+                <div class="row g-2">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="form-label" for="">City</label>
+                            <input class="form-control" id="exampleInputText" name="city" type="text"
+                                placeholder="City">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="form-label" for="">State / Province</label>
+                            <input class="form-control" id="exampleInputText" name="state" type="text"
+                                placeholder="State / Province">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="">Postal / Zip Code</label>
+                    <input class="form-control" id="exampleInputText" name="zipcode" type="text"
+                        placeholder="Postal / Zip Code">
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label class="form-label" for="">Student Email</label>
+                    <input class="form-control" id="exampleInputText" name="email" type="email"
+                        placeholder="Student Email">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="exampleInputemail">Class in which admission sought</label>
+                    <select class="form-select form-control" id="defaultSelect" name="admission"
+                        aria-label="Default select example">
+                        <option value="" selected disabled>Please Select</option>
+                        <option value="1st">1st</option>
+                        <option value="2nd">2nd</option>
+                        <option value="3rd">3rd</option>
+                        <option value="4th">4th</option>
+                        <option value="5th">5th</option>
+                        <option value="6th">6th</option>
+                        <option value="7th">7th</option>
+                        <option value="8th">8th</option>
+                        <option value="9th">9th</option>
+                        <option value="10th">10th</option>
+
+
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="form-label" for="exampleInputemail">Question Type</label>
+                    <select class="form-select form-control" id="defaultSelect" name="qtype"
+                        aria-label="Default select example">
+                        <option value="" selected disabled>Please Select</option>
+                        <option value="English Medium">English Medium</option>
+                        <option value="Malayalam Medium">Malayalam Medium</option>
+
+
+                    </select>
+                </div>
+
+                <hr>
+                <h6 class="mb-4">Agreemnet</h6>
+                <h6>
+                    <div class="row g-2">
+                        <div class="col-1 mt-4">
+                            I
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <input class="line-input" id="exampleInputText" name="afname" type="text"
+                                    placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group">
+                                <input class="line-input" id="exampleInputText" name="alname" type="text"
+                                    placeholder="Last Name">
+                            </div>
+                        </div>
+                    </div>hereby declare that the above given information filled is true to best of my knowledge and I
+                    agree to abide by the madrassa rules and regulations.
+                </h6><br>
+
+                <div class="form-group">
+                    <label class="form-label" for="inputDate">Date</label>
+                    <input class="line-input" id="inputDate" style="width: 150px;" type="date" name="adate">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="inputDate">Place</label>
+                    <input class="line-input" style="width: 150px;" id="inputDate" type="text" name="aplace">
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label class="form-label" for="customFile">Your Photo</label>
+                    <input class="form-control border-1" id="customFile" name="avatar" type="file">
+                </div>
+
+                <h6>Your Signature</h6>
+                <div class="form-group">
+                    <div id="signature-pad" class="signature-pad">
+                        <canvas id="canvas" width="300px" height="250px"
+                            style="border-radius: 10px; border:1px solid gray;"></canvas>
+                        <button type="button" class="mt-3 w-50" id="clear">Clear</button>
+                    </div>
+                    <input type="hidden" name="signature" id="signature">
+                </div>
+
+
+                <button class="btn btn-primary mt-4 w-100 d-flex align-items-center justify-content-center"
+                    type="submit">Register Now
+                    <svg class="bi bi-arrow-right-short" width="24" height="24" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z">
+                        </path>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    // JavaScript code to capture signature and store it in the hidden input field
+    document.addEventListener("DOMContentLoaded", function () {
+        var canvas = document.getElementById('canvas');
+        var signatureInput = document.getElementById('signature');
+        var signaturePad = new SignaturePad(canvas);
+
+        document.getElementById('clear').addEventListener('click', function () {
+            signaturePad.clear();
+        });
+
+        document.querySelector('form').addEventListener('submit', function (e) {
+            // Prevent form submission if the signature is empty
+            if (signaturePad.isEmpty()) {
+                e.preventDefault();
+                alert('Please provide your signature.');
+            } else {
+                // Save signature data to the hidden input field
+                signatureInput.value = signaturePad.toDataURL();
+            }
+        });
+    });
+
+</script>
