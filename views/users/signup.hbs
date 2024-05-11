@@ -31,19 +31,22 @@
         <h4 class="text-center p-4">Registration Form</h4>
         <div class="card-body">
             <form action="/signup" enctype="multipart/form-data" method="POST" style="">
+                <input type="hidden" name="regid" id="hello">
+                <input type="hidden" name="orgdate" id="datetime">
+
                 <div class="row g-2">
                     <div class="col-6">
                         <div class="form-group">
                             <label class="form-label" for="exampleInputText">First Name</label>
                             <input class="form-control" id="exampleInputText" name="fname" type="text"
-                                placeholder="First Name">
+                                placeholder="First Name" required>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-group">
                             <label class="form-label" for="exampleInputText">Last Name</label>
                             <input class="form-control" id="exampleInputText" name="lname" type="text"
-                                placeholder="Last Name">
+                                placeholder="Last Name" required>
                         </div>
                     </div>
                 </div>
@@ -51,7 +54,8 @@
                     <div class="col-6">
                         <div class="form-group">
                             <label class="form-label" for="inputDate">Birth Date</label>
-                            <input class="form-control" id="dob" onchange="calculateAge()" type="date" name="dob">
+                            <input class="form-control" id="dob" onchange="calculateAge()" type="date" name="dob"
+                                required>
                         </div>
                     </div>
                     <div class="col-6">
@@ -65,7 +69,7 @@
                 <div class="form-group">
                     <label class="form-label" for="exampleInputemail">Gender</label>
                     <select class="form-select form-control" id="defaultSelect" name="Gender"
-                        aria-label="Default select example">
+                        aria-label="Default select example" required>
                         <option value="" selected disabled>Select Your Gender</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -75,31 +79,34 @@
                 <div class="form-group">
                     <label class="form-label" for="inputDate">Father's Name</label>
 
-                    <input class="form-control w-100" name="father" type="text" placeholder="Enter Your Father's Name">
+                    <input class="form-control w-100" name="father" type="text" placeholder="Enter Your Father's Name"
+                        required>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label" for="inputDate">Mother's Name</label>
 
-                    <input class="form-control w-100" name="mother" type="text" placeholder="Enter Your Mother's Name">
+                    <input class="form-control w-100" name="mother" type="text" placeholder="Enter Your Mother's Name"
+                        required>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label" for="inputDate">Occupation</label>
-                    <input class="form-control w-100" name="occ" type="text" placeholder="Enter Occupation">
+                    <input class="form-control w-100" name="occ" type="text" placeholder="Enter Occupation" required>
                 </div>
                 <hr>
                 <h6 class="mb-3">Name of the guardian and address </h6>
                 <div class="form-group">
                     <label class="form-label" for="">Guardian Name</label>
-                    <input class="form-control w-100" name="gname" type="text" placeholder="Enter Occupation">
+                    <input class="form-control w-100" name="gname" type="text" placeholder="Enter Guardian Name"
+                        required>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label" for="">Guardian Address</label>
 
-                    <textarea class="form-control w-100" name="gaddress" type="text"
-                        placeholder="Guardian address"></textarea>
+                    <textarea class="form-control w-100" name="gaddress" type="text" placeholder="Guardian address"
+                        required></textarea>
                 </div>
 
                 <div class="row g-2">
@@ -107,14 +114,14 @@
                         <div class="form-group">
                             <label class="form-label" for="">City</label>
                             <input class="form-control" id="exampleInputText" name="gcity" type="text"
-                                placeholder="City">
+                                placeholder="City" required>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-group">
                             <label class="form-label" for="">State / Province</label>
                             <input class="form-control" id="exampleInputText" name="gstate" type="text"
-                                placeholder="State / Province">
+                                placeholder="State / Province" required>
                         </div>
                     </div>
                 </div>
@@ -123,7 +130,7 @@
                     <div class="form-group">
                         <label class="form-label" for="">Country</label>
                         <input class="form-control" id="exampleInputText" name="gcountry" type="text"
-                            placeholder="Country">
+                            placeholder="Country" required>
                     </div>
                 </div>
 
@@ -136,18 +143,18 @@
                 <div class="form-group">
                     <label class="form-label" for="exampleInputtelephone">Your Phone Number</label>
                     <input class="form-control" id="exampleInputtelephone" name="mobile" type="tel"
-                        placeholder="+880 123 456 7890">
+                        placeholder="+880 123 456 7890" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="exampleInputtelephone">Your Whatsapp Number</label>
                     <input class="form-control" id="exampleInputtelephone" type="tel" name="whatsapp"
-                        placeholder="+880 123 456 7890">
+                        placeholder="+880 123 456 7890" required>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label" for="">Mother Tongue</label>
                     <input class="form-control" id="exampleInputText" name="tongue" type="text"
-                        placeholder="Mother Tongue">
+                        placeholder="Mother Tongue" required>
                 </div>
 
 
@@ -156,45 +163,47 @@
                 <h6 class="mb-3">Your Residential Address </h6>
                 <div class="form-group">
                     <label class="form-label" for="">Street Address</label>
-                    <textarea class="form-control w-100" name="address1" type="text" placeholder=" address"></textarea>
+                    <textarea class="form-control w-100" name="address1" type="text" placeholder=" address"
+                        required></textarea>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label" for="">Street Address Line 2</label>
-                    <textarea class="form-control w-100" name="address2" type="text" placeholder="address"></textarea>
+                    <textarea class="form-control w-100" name="address2" type="text" placeholder="address"
+                        required></textarea>
                 </div>
 
                 <div class="row g-2">
                     <div class="col-6">
                         <div class="form-group">
                             <label class="form-label" for="">City</label>
-                            <input class="form-control" id="exampleInputText" name="city" type="text"
-                                placeholder="City">
+                            <input class="form-control" id="exampleInputText" name="city" type="text" placeholder="City"
+                                required>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-group">
                             <label class="form-label" for="">State / Province</label>
                             <input class="form-control" id="exampleInputText" name="state" type="text"
-                                placeholder="State / Province">
+                                placeholder="State / Province" required>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="">Postal / Zip Code</label>
                     <input class="form-control" id="exampleInputText" name="zipcode" type="text"
-                        placeholder="Postal / Zip Code">
+                        placeholder="Postal / Zip Code" required>
                 </div>
                 <hr>
                 <div class="form-group">
                     <label class="form-label" for="">Student Email</label>
                     <input class="form-control" id="exampleInputText" name="email" type="email"
-                        placeholder="Student Email">
+                        placeholder="Student Email" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="exampleInputemail">Class in which admission sought</label>
                     <select class="form-select form-control" id="defaultSelect" name="admission"
-                        aria-label="Default select example">
+                        aria-label="Default select example" required>
                         <option value="" selected disabled>Please Select</option>
                         <option value="1st">1st</option>
                         <option value="2nd">2nd</option>
@@ -215,7 +224,7 @@
                 <div class="form-group">
                     <label class="form-label" for="exampleInputemail">Question Type</label>
                     <select class="form-select form-control" id="defaultSelect" name="qtype"
-                        aria-label="Default select example">
+                        aria-label="Default select example" required>
                         <option value="" selected disabled>Please Select</option>
                         <option value="English Medium">English Medium</option>
                         <option value="Malayalam Medium">Malayalam Medium</option>
@@ -234,13 +243,13 @@
                         <div class="col-6">
                             <div class="form-group">
                                 <input class="line-input" id="exampleInputText" name="afname" type="text"
-                                    placeholder="First Name">
+                                    placeholder="First Name" required>
                             </div>
                         </div>
                         <div class="col-5">
                             <div class="form-group">
                                 <input class="line-input" id="exampleInputText" name="alname" type="text"
-                                    placeholder="Last Name">
+                                    placeholder="Last Name" required>
                             </div>
                         </div>
                     </div>hereby declare that the above given information filled is true to best of my knowledge and I
@@ -249,18 +258,18 @@
 
                 <div class="form-group">
                     <label class="form-label" for="inputDate">Date</label>
-                    <input class="line-input" id="inputDate" style="width: 150px;" type="date" name="adate">
+                    <input class="line-input" id="inputDate" style="width: 150px;" type="date" name="adate" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="inputDate">Place</label>
-                    <input class="line-input" style="width: 150px;" id="inputDate" type="text" name="aplace">
+                    <input class="line-input" style="width: 150px;" id="inputDate" type="text" name="aplace" required>
                 </div>
 
                 <hr>
 
                 <div class="form-group">
                     <label class="form-label" for="customFile">Your Photo</label>
-                    <input class="form-control border-1" id="customFile" name="avatar" type="file">
+                    <input class="form-control border-1" id="customFile" name="avatar" type="file" required>
                 </div>
 
                 <h6>Your Signature</h6>
@@ -270,7 +279,7 @@
                             style="border-radius: 10px; border:1px solid gray;"></canvas>
                         <button type="button" class="mt-3 w-50" id="clear">Clear</button>
                     </div>
-                    <input type="hidden" name="signature" id="signature">
+                    <input type="hidden" name="signature" id="signature" required>
                 </div>
 
 
@@ -329,4 +338,44 @@
 
         document.getElementById("age").value = age;
     }
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        generateRandomString();
+    });
+
+    function generateRandomString() {
+        // Define the set of characters you want to include
+        const characters = '0123456789';
+
+        // Generate a random 5-digit number
+        let randomNumber = 'MFI';
+        for (let i = 0; i < 5; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            randomNumber += characters.charAt(randomIndex);
+        }
+
+        // Set the value of the input field
+        document.getElementById('hello').value = randomNumber;
+
+        // Log the generated number to the console (optional)
+        console.log('Generated Number:', randomNumber);
+    }
+</script>
+
+
+<script>
+    // Get current date and time
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = (now.getMonth() + 1).toString().padStart(2, '0');
+    const day = now.getDate().toString().padStart(2, '0');
+    const hours = ((now.getHours() + 11) % 12 + 1).toString().padStart(2, '0'); // Convert to 12-hour format
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const ampm = now.getHours() >= 12 ? 'PM' : 'AM';
+
+    // Set default value to current date and time in 12-hour format with AM/PM
+    const defaultDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
+    document.getElementById('datetime').value = defaultDateTime;
 </script>

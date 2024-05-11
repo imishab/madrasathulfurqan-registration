@@ -4,10 +4,14 @@
 
         <div class="card shadow mt-3">
             <div class="card-body">
+                <a href="/admin/remove-all-users" onclick="return confirm('Are You Sure to Delete All Students ?')"
+                    class="btn btn-danger mb-2">Delete All Students</a>
+
                 <table class="w-100" id="dataTable">
                     <thead>
                         <tr>
                             <th>No.</th>
+                            <th>Reg ID</th>
                             <th>Photo</th>
                             <th>Full Name</th>
                             <th>Mobile</th>
@@ -21,15 +25,18 @@
                         {{#each users}}
                         <tr>
                             <td>{{incremented @index}}</td>
+                            <td>{{this.regid}}</td>
+
                             <td>
                                 <a href="/images/user-profiles/{{this._id}}.png">
-                                    <img src="/images/user-profiles/{{this._id}}.png" alt="" style="width: 100%">
+                                    <img src="/images/user-profiles/{{this._id}}.png" width="100px" alt="">
                                 </a>
                             </td>
                             <td>{{this.fname}} {{this.lname}}</td>
                             <td>{{this.mobile}}</td>
                             <td>{{this.email}}</td>
-                            <td><a href="/admin/view-more/{{this._id}}" class="btn btn-dark btn-sm">View Full Details</a></td>
+                            <td><a href="/admin/view-more/{{this._id}}" class="btn btn-dark btn-sm">View Full
+                                    Details</a></td>
 
                         </tr>
                         {{/each}}
