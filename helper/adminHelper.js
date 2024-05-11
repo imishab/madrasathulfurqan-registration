@@ -16,6 +16,25 @@ module.exports = {
       });
   },
 
+  // getUserById: (userId) => {
+  //   return new Promise(async (resolve, reject) => {
+  //     let user = await db
+  //       .get()
+  //       .collection(collections.USERS_COLLECTION)
+  //       .findOne({ _id: objectId(userId) });
+  //     resolve(user);
+  //   });
+  // },
+
+  getUserById: async (userId) => {
+    try {
+      const user = await db.collection(collections.USERS_COLLECTION).findOne({ _id: userId });
+      return user;
+    } catch (error) {
+      throw new Error('Error fetching user details');
+    }
+  },
+
   getAllProducts: () => {
     return new Promise(async (resolve, reject) => {
       let products = await db
@@ -213,7 +232,7 @@ module.exports = {
     return new Promise(async (resolve, reject) => {
       db.get()
         .collection(collections.PRODUCTS_COLLECTION)
-        .createIndex({ Name : "text" }).then(async()=>{
+        .createIndex({ Name: "text" }).then(async () => {
           let result = await db
             .get()
             .collection(collections.PRODUCTS_COLLECTION)

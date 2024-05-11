@@ -20,6 +20,39 @@ router.get("/", verifySignedIn, function (req, res, next) {
   });
 });
 
+// router.get(
+//   "/view-more/:id",
+//   verifySignedIn,
+//   async function (req, res) {
+//     let administator = req.session.admin;
+//     let userId = req.params.id;
+//     const user = await adminHelper.getUserById(userId);
+//     res.render("admin/view-more", {
+//       admin: true,
+//       administator,
+//       user,
+//       products,
+//     });
+//   }
+// );
+
+router.get('/view-more/:id', async (req, res) => {
+  let administator = req.session.admin;
+  // let userId = req.session.user._id;
+  let userId = req.params.id;
+
+  // const userId = req.params.userId;
+
+  try {
+    const user = await adminHelper.getUserById(userId);
+    res.render('admin/view-more', { user, admin: true, administator, });
+  } catch (error) {
+    console.error('Error fetching user details:', error);
+    res.status(500).send('Error fetching user details');
+  }
+});
+
+
 router.get("/all-products", verifySignedIn, function (req, res) {
   let administator = req.session.admin;
   adminHelper.getAllProducts().then((products) => {
@@ -58,6 +91,7 @@ router.get("/signin", function (req, res) {
   } else {
     res.render("admin/signin", {
       admin: true,
+      layout: 'empty',
       signInErr: req.session.signInErr,
     });
     req.session.signInErr = null;

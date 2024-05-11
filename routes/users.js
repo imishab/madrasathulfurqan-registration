@@ -15,9 +15,6 @@ const verifySignedIn = (req, res, next) => {
 /* GET home page. */
 router.get("/", async function (req, res, next) {
   let user = req.session.user;
-  if (user) {
-    let userId = req.session.user._id;
-  }
   userHelper.getAllProducts().then((products) => {
     res.render("users/home", { admin: false, products, user, layout: "empty" });
   });
@@ -73,6 +70,31 @@ router.post("/signup", function (req, res) {
     });
   });
 });
+
+
+// router.post("/signup", function (req, res) {
+//   if (!req.files || !req.files.avatar) {
+
+//     res.render("users/signup", { admin: false, layout: "empty", error: "Please upload an image." });
+//     return;
+//   }
+
+//   let avatar = req.files.avatar;
+//   let signature = req.body.signature; 
+
+//   avatar.mv("./public/images/user-profiles/" + avatar.name, function (err) {
+//     if (err) {
+//       console.log(err);
+//       return;
+//     }
+
+//     userHelper.doSignup(req.body, signature).then((response) => {
+//       req.session.signedIn = true;
+//       req.session.user = response;
+//       res.render("/registered", { avatarName: avatar.name });
+//     });
+//   });
+// });
 
 
 
