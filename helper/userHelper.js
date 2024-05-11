@@ -32,14 +32,17 @@ module.exports = {
         const transporter = nodemailer.createTransport({
           service: 'gmail',
           auth: {
-            user: 'mishabmsb91@gmail.com',  // Replace with your admin email
-            pass: 'buekcxygvhmrqska'          // Replace with your admin email password or app password
+            user: 'madrasathulfurqaninternational@gmail.com',  // Replace with your admin email
+            pass: 'cecbuirhobayeouj'
+            // buekcxygvhmrqska
+
+            // Replace with your admin email password or app password
           }
         });
 
         const mailOptions = {
           from: userData.email,
-          to: 'mishabmsb91@gmail.com',   // Replace with your actual admin email
+          to: 'madrasathulfurqaninternational@gmail.com',   // Replace with your actual admin email
           subject: 'New User Registration',
           html: `
           <center><h4>Madrasathulfurqan international online Madrassa Admission form 2023-24</h4></center>
