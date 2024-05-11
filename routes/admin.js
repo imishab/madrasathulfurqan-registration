@@ -45,6 +45,7 @@ router.get('/view-more/:id', async (req, res) => {
 
   try {
     const user = await adminHelper.getUserById(userId);
+    console.log('userrrrrrrrrrrrrrrrrr',user);
     res.render('admin/view-more', { user, admin: true, administator, });
   } catch (error) {
     console.error('Error fetching user details:', error);

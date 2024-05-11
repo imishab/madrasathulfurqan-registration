@@ -55,20 +55,24 @@ router.post("/signup", function (req, res) {
   let signature = req.body.signature; // Get signature data from the form
 
   // Move the uploaded image to the destination directory
-  avatar.mv("./public/images/user-profiles/" + avatar.name, function (err) {
-    if (err) {
-      console.log(err);
-      // Handle error (e.g., show an error message to the user)
-      return;
-    }
+ 
 
     // Proceed with user signup after successful file upload
     userHelper.doSignup(req.body, signature).then((response) => {
+      console.log(response,"resssp")
       req.session.signedIn = true;
       req.session.user = response;
+      avatar.mv("./public/images/user-profiles/" + response._id+".png", function (err) {
+        if (err) {
+          console.log(err);
+          // Handle error (e.g., show an error message to the user)
+          return;
+        }
+    
+      })
       res.redirect("/registered");
     });
-  });
+
 });
 
 

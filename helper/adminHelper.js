@@ -1,6 +1,7 @@
 var db = require("../config/connection");
 var collections = require("../config/collections");
 var bcrypt = require("bcrypt");
+const { use } = require("../routes/users");
 const objectId = require("mongodb").ObjectID;
 
 module.exports = {
@@ -27,8 +28,10 @@ module.exports = {
   // },
 
   getUserById: async (userId) => {
+   
     try {
-      const user = await db.collection(collections.USERS_COLLECTION).findOne({ _id: userId });
+      const user = await db.get().collection(collections.USERS_COLLECTION).findOne({ _id: objectId(userId) });
+      console.log(userId,user)
       return user;
     } catch (error) {
       throw new Error('Error fetching user details');

@@ -23,12 +23,13 @@
                             <td>{{incremented @index}}</td>
                             <td>
                                 <a href="/images/user-profiles/{{this._id}}.png">
-                                    <img src="/images/user-profiles/{{avatarName}}.png" alt="" style="width: 100%"></a>
+                                    <img src="/images/user-profiles/{{this._id}}.png" alt="" style="width: 100%">
+                                </a>
                             </td>
                             <td>{{this.fname}} {{this.lname}}</td>
                             <td>{{this.mobile}}</td>
                             <td>{{this.email}}</td>
-                            <td><a href="/view-more/{{this._id}}" class="btn btn-dark btn-sm">View Full Details</a></td>
+                            <td><a href="/admin/view-more/{{this._id}}" class="btn btn-dark btn-sm">View Full Details</a></td>
 
                         </tr>
                         {{/each}}
