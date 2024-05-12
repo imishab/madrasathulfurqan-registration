@@ -1,5 +1,7 @@
 {{#if user}}
-<br><br>
+
+
+
 <style>
     .form-control.form-control-clicked {
         background-color: #ffffff;
@@ -7,10 +9,155 @@
         color: #073984;
     }
 </style>
+<div class="page-content-wrapper py-3">
+    <div class="team-member-wrapper direction-rtl">
+        <div class="container">
+            <a href="/registered" class="btn btn-sm btn-dark mt-2">Back</a>
+            <a href="/print" class="btn btn-sm btn-primary mt-2">Download my card</a>
+            <a target="_blank"
+                href="https://wa.me/{{user.mobile}}?text=Hi%20{{user.fname}}...%0A%0AThis%20is%20my%20signin%20details%20%3A%20%0AEmail%20%3A%20{{user.email}}%0APhone%20%3A%20{{user.mobile}}"
+                class="btn btn-sm btn-success mt-2">Save my login data to whatsapp</a>
+            <br><br>
+
+            <div class="row g-3">
+                <!-- Single Team Member-->
+                <div class="col-lg-6">
+                    <div class="card team-member-card shadow">
+                        <div class="card-body">
+                            <!-- Member Image-->
+                            <div class="team-member-img shadow-sm"><img src="/images/user-profiles/{{user._id}}.png"
+                                    alt=""></div>
+                            <!-- Team Info-->
+                            <div class="team-info">
+                                <h6 class="mb-1 fz-14">{{user.fname}} {{user.lname}}</h6>
+                                <p class="mb-0 fz-12">{{user.email}}</p>
+                            </div>
+                            <div class="card shadow p-3 mt-3">
+                                <center>
+                                    <table class="mt-2" style="border-collapse: collapse; width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td style=" text-align: left; padding: 2px;">Date of
+                                                    birth : </td>
+                                                <td style=" text-align: left; padding: 2px;">
+                                                    {{user.dob}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style=" text-align: left; padding: 2px;">Gender :
+                                                </td>
+                                                <td style=" text-align: left; padding: 2px;">
+                                                    {{user.Gender}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style=" text-align: left; padding: 2px;">Mobile Number :
+                                                </td>
+                                                <td style=" text-align: left; padding: 2px;">
+                                                    {{user.mobile}}</td>
+                                            </tr>
+
+
+
+
+
+
+                                        </tbody>
+                                    </table>
+                                </center>
+                            </div>
+                        </div>
+                        <!-- Contact Info-->
+                        <div class="contact-info bg-primary">
+                            <p class="mb-0 text-truncate">Madrasathulfurqan International</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Team Member-->
+                <div class="col-lg-6">
+                    <div class="card team-member-card shadow">
+                        <div class="card-body">
+
+                            <div class="card shadow p-3 mt-3">
+                                <center>
+                                    <table class="mt-2" style="border-collapse: collapse; width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td style=" text-align: left; padding: 2px;">Father : </td>
+                                                <td style=" text-align: left; padding: 2px;">
+                                                    {{user.father}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style=" text-align: left; padding: 2px;">Mother : </td>
+                                                <td style=" text-align: left; padding: 2px;">
+                                                    {{user.mother}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style=" text-align: left; padding: 2px;">Address :
+                                                </td>
+                                                <td style=" text-align: left; padding: 2px;">
+                                                    {{user.address1}},<br> {{user.city}}<br> {{user.zipcode}}</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </center>
+                            </div>
+                            <table class="mt-2" style="border-collapse: collapse; width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <td>
+                                        <div class=""><img width="150px" src="{{user.signature}}" alt="">
+                                        </div>
+                                    </td>
+                                    <td><img width="135px" src="/img/logo.png"></td>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                        <!-- Contact Info-->
+                        <div class="contact-info bg-primary">
+                            <p class="mb-0 text-truncate">www.madrasathulfurqan.online</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Team Member-->
+
+                <!-- Single Team Member-->
+
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container-lg">
-    <a href="/registered" class="btn btn-sm btn-dark">Back</a><br><br>
+
+
+
+
     <div class="card">
-        <h4 class="text-center p-4">Your Details</h4>
+        <h4 class="text-center p-4">Full Details</h4>
         <div class="card-body">
             <form>
                 <div class="row g-2">
@@ -138,7 +285,8 @@
 
                 <div class="form-group">
                     <label class="form-label" for="">Street Address Line 2</label>
-                    <textarea class="form-control w-100" type="text" placeholder="address">{{user.address2}}</textarea>
+                    <textarea class="form-control w-100" type="text" placeholder="address"
+                        readonly>{{user.address2}}</textarea>
                 </div>
 
                 <div class="row g-2">

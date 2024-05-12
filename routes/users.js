@@ -30,6 +30,11 @@ router.get("/profile", verifySignedIn, function (req, res, next) {
   res.render("users/profile", { admin: false, user, layout: "empty" });
 });
 
+router.get("/print", verifySignedIn, function (req, res, next) {
+  let user = req.session.user;
+  res.render("users/print", { admin: false, user, layout: "empty" });
+});
+
 // Route for displaying the signup form
 router.get("/signup", function (req, res) {
   if (req.session.signedIn) {
@@ -55,23 +60,23 @@ router.post("/signup", function (req, res) {
   let signature = req.body.signature; // Get signature data from the form
 
   // Move the uploaded image to the destination directory
- 
 
-    // Proceed with user signup after successful file upload
-    userHelper.doSignup(req.body, signature).then((response) => {
-      console.log(response,"resssp")
-      req.session.signedIn = true;
-      req.session.user = response;
-      avatar.mv("./public/images/user-profiles/" + response._id+".png", function (err) {
-        if (err) {
-          console.log(err);
-          // Handle error (e.g., show an error message to the user)
-          return;
-        }
-    
-      })
-      res.redirect("/registered");
-    });
+
+  // Proceed with user signup after successful file upload
+  userHelper.doSignup(req.body, signature).then((response) => {
+    console.log(response, "resssp")
+    req.session.signedIn = true;
+    req.session.user = response;
+    avatar.mv("./public/images/user-profiles/" + response._id + ".png", function (err) {
+      if (err) {
+        console.log(err);
+        // Handle error (e.g., show an error message to the user)
+        return;
+      }
+
+    })
+    res.redirect("/registered");
+  });
 
 });
 
@@ -105,7 +110,7 @@ router.post("/signup", function (req, res) {
 
 router.get("/signin", function (req, res) {
   if (req.session.signedIn) {
-    res.redirect("/");
+    res.redirect("/profile");
   } else {
     res.render("users/signin", {
       admin: false,
@@ -121,7 +126,7 @@ router.post("/signin", function (req, res) {
     if (response.status) {
       req.session.signedIn = true;
       req.session.user = response.user;
-      res.redirect("/");
+      res.redirect("/profile");
     } else {
       req.session.signInErr = "Invalid Email/Password";
       res.redirect("/signin");

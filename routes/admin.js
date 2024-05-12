@@ -36,7 +36,7 @@ router.get("/", verifySignedIn, function (req, res, next) {
 //   }
 // );
 
-router.get('/view-more/:id', async (req, res) => {
+router.get('/view-more/:id', verifySignedIn, async (req, res) => {
   let administator = req.session.admin;
   // let userId = req.session.user._id;
   let userId = req.params.id;
@@ -45,8 +45,8 @@ router.get('/view-more/:id', async (req, res) => {
 
   try {
     const user = await adminHelper.getUserById(userId);
-    console.log('userrrrrrrrrrrrrrrrrr',user);
-    res.render('admin/view-more', { user, admin: true, administator, });
+    console.log('userrrrrrrrrrrrrrrrrr', user);
+    res.render('admin/view-more', { user, admin: true, administator, layout: 'empty', });
   } catch (error) {
     console.error('Error fetching user details:', error);
     res.status(500).send('Error fetching user details');

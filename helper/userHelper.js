@@ -172,25 +172,24 @@ Place : ${userData.aplace}
       let user = await db
         .get()
         .collection(collections.USERS_COLLECTION)
-        .findOne({ Email: userData.Email });
-      if (user) {
-        bcrypt.compare(userData.Password, user.Password).then((status) => {
-          if (status) {
-            console.log("Login Success");
-            response.user = user;
-            response.status = true;
-            resolve(response);
-          } else {
-            console.log("Login Failed");
-            resolve({ status: false });
-          }
+        .findOne({
+          email: userData.email,
+          mobile: userData.mobile
         });
+
+      if (user) {
+        console.log("Login Success");
+        response.user = user;
+        response.status = true;
+        resolve(response);
       } else {
         console.log("Login Failed");
         resolve({ status: false });
       }
     });
   },
+
+
 
   addToCart: (productId, userId) => {
     console.log(userId);

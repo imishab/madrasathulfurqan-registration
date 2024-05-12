@@ -1,0 +1,145 @@
+<div class="page-content-wrapper py-3">
+    <div class="team-member-wrapper direction-rtl">
+        <div class="container">
+            <div class="row g-3">
+                <!-- Single Team Member-->
+                <div class="col-lg-6">
+                    <div class="card team-member-card shadow">
+                        <div class="card-body">
+                            <!-- Member Image-->
+                            <div class="team-member-img shadow-sm"><img src="/images/user-profiles/{{user._id}}.png"
+                                    alt=""></div>
+                            <!-- Team Info-->
+                            <div class="team-info">
+                                <h6 class="mb-1 fz-14">{{user.fname}} {{user.lname}}</h6>
+                                <p class="mb-0 fz-12">{{user.email}}</p>
+                            </div>
+                            <div class="card shadow p-3 mt-3">
+                                <center>
+                                    <table class="mt-2" style="border-collapse: collapse; width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td style=" text-align: left; padding: 2px;">Date of
+                                                    birth : </td>
+                                                <td style=" text-align: left; padding: 2px;">
+                                                    {{user.dob}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style=" text-align: left; padding: 2px;">Gender :
+                                                </td>
+                                                <td style=" text-align: left; padding: 2px;">
+                                                    {{user.Gender}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style=" text-align: left; padding: 2px;">Mobile Number :
+                                                </td>
+                                                <td style=" text-align: left; padding: 2px;">
+                                                    {{user.mobile}}</td>
+                                            </tr>
+
+
+
+
+
+
+                                        </tbody>
+                                    </table>
+                                </center>
+                            </div>
+                        </div>
+                        <!-- Contact Info-->
+                        <div class="contact-info bg-primary">
+                            <p class="mb-0 text-truncate">Madrasathulfurqan International</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Team Member-->
+                <div class="col-lg-6">
+                    <div class="card team-member-card shadow">
+                        <div class="card-body">
+
+                            <div class="card shadow p-3 mt-3">
+                                <center>
+                                    <table class="mt-2" style="border-collapse: collapse; width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td style=" text-align: left; padding: 2px;">Father : </td>
+                                                <td style=" text-align: left; padding: 2px;">
+                                                    {{user.father}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style=" text-align: left; padding: 2px;">Mother : </td>
+                                                <td style=" text-align: left; padding: 2px;">
+                                                    {{user.mother}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style=" text-align: left; padding: 2px;">Address :
+                                                </td>
+                                                <td style=" text-align: left; padding: 2px;">
+                                                    {{user.address1}},<br> {{user.city}}<br> {{user.zipcode}}</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </center>
+                            </div>
+                            <table class="mt-2" style="border-collapse: collapse; width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <td>
+                                        <div class=""><img width="150px" src="{{user.signature}}" alt="">
+                                        </div>
+                                    </td>
+                                    <td><img width="135px" src="/img/logo.png"></td>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                        <!-- Contact Info-->
+                        <div class="contact-info bg-primary">
+                            <p class="mb-0 text-truncate">www.madrasathulfurqan.online</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Team Member-->
+
+                <!-- Single Team Member-->
+
+            </div><br><br>
+            <center>
+                <a href="/profile" class="btn btn-sm btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+                    </svg></a>
+
+                <button onclick="window.print()" class="btn btn-sm btn-dark">Download</button><br><br>
+            </center>
+        </div>
+
+    </div>
+</div>
