@@ -272,7 +272,7 @@
                     <input class="form-control border-1" id="customFile" name="avatar" type="file" required>
                 </div>
 
-                <h6>Your Signature</h6>
+                <h6>Parent's Signature</h6>
                 <div class="form-group">
                     <div id="signature-pad" class="signature-pad">
                         <canvas id="canvas" width="300px" height="250px"
@@ -297,12 +297,18 @@
     </div>
 </div>
 <br>
-<center>
-    <p>
-        If you have already registered, then <a href="/signin">click here</a> to see your profile card
-    </p>
-</center>
-<br><br><br><br>
+<div class="container">
+    <center>
+        <p>
+            If you have already registered, then <a href="/signin">click here</a> to see your profile card
+        </p>
+        <p class="mt-3">Developed By <a href="https://www.vectorcrop.com">VectorCrop.</p>
+
+    </center>
+</div>
+<br>
+
+<br><br>
 <script>
     // JavaScript code to capture signature and store it in the hidden input field
     document.addEventListener("DOMContentLoaded", function () {

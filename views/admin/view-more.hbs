@@ -18,100 +18,108 @@
             </thead>
             <tbody>
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Student Photo & Signature
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Student Photo
                     </td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">
                         <a href="/images/user-profiles/{{user._id}}.png" target="_blank">
                             <img src="/images/user-profiles/{{user._id}}.png" width="100px">
                         </a>
-                        <a href="{{user.signature}}" target="_blank">
-                            <img src="{{user.signature}}" width="100px">
-                        </a>
+
                     </td>
                 </tr>
                 {{!-- <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Register Number</td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">{{user.regid}}
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Register Number</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">{{user.regid}}
 
                     </td>
                 </tr> --}}
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Full Name</td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">{{user.fname}}
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Full Name</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">{{user.fname}}
                         {{user.lname}}
                     </td>
                 </tr>
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Date of birth</td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">{{user.dob}}</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Date of birth</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">{{user.dob}}</td>
                 </tr>
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Age of the Student</td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">{{user.age}}</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Age of the Student</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">{{user.age}}</td>
                 </tr>
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Gender</td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">{{user.Gender}}</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Gender</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">{{user.Gender}}</td>
                 </tr>
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Father's Name</td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">{{user.father}}</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Father's Name</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">{{user.father}}</td>
                 </tr>
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Mother's Name</td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">{{user.mother}}</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Mother's Name</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">{{user.mother}}</td>
                 </tr>
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Occupation</td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">{{user.occ}}</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Occupation</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">{{user.occ}}</td>
                 </tr>
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Name of the guardian and
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Name of the guardian and
                         address
                     </td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">{{user.gname}},
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">{{user.gname}},
                         {{user.gaddress}}, {{user.gcity}}, {{user.gstate}}, {{user.gcountry}}</td>
                 </tr>
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Phone & Whatsapp Number</td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">{{user.mobile}} |
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Phone & Whatsapp Number</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">{{user.mobile}} |
                         {{user.whatsapp}}</td>
                 </tr>
 
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Mother Tongue</td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">{{user.tongue}}</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Mother Tongue</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">{{user.tongue}}</td>
                 </tr>
 
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Residential Address</td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">{{user.address1}},
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Residential Address</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">{{user.address1}},
                         {{user.address2}}, {{user.city}}, {{user.state}}, {{user.zipcode}}</td>
                 </tr>
 
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Student E-mail</td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">{{user.email}}</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Student E-mail</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">{{user.email}}</td>
                 </tr>
 
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Class in which admission
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Class in which admission
                         sought
                     </td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">{{user.admission}}</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">{{user.admission}}</td>
                 </tr>
 
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Type a question</td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">{{user.qtype}}</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Type a question</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">{{user.qtype}}</td>
                 </tr>
 
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">Agreement</td>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 5px;">
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Agreement</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">
                         Name : {{user.afname}} {{user.alname}}<br>
                         Date : {{user.adate}}<br>
                         Place : {{user.aplace}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;">Parent's Signature</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 15px;"> <a
+                            href="{{user.signature}}" target="_blank">
+                            <img src="{{user.signature}}" width="100px">
+                        </a>
+
                     </td>
                 </tr>
 
