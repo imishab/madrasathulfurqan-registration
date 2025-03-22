@@ -5,8 +5,8 @@ const state = {
 };
 
 module.exports.connect = function (done) {
-  const url = "mongodb+srv://clientsvectorcrop:msb.com001@madrasathulfurqan-regis.ckhgtgy.mongodb.net/?retryWrites=true&w=majority&appName=Madrasathulfurqan-Registartion";
-  const dbname = "Madrasathulfurqan-Registartion";
+  const url = "mongodb+srv://clientsvectorcrop:vector.com001@msmnorth.weyck.mongodb.net/?retryWrites=true&w=majority&appName=msmnorth";
+  const dbname = "Madrasathulfurqan";
 
   mongoClient.connect(url, { useUnifiedTopology: true }, (err, data) => {
     if (err) {
@@ -21,3 +21,10 @@ module.exports.connect = function (done) {
 module.exports.get = function () {
   return state.db;
 };
+
+
+
+
+
+
+
