@@ -45,7 +45,7 @@ module.exports = {
           to: 'madrasathulfurqaninternational@gmail.com',   // Replace with your actual admin email
           subject: 'New User Registration',
           html: `
-          <center><h4>Madrasathulfurqan international online Madrassa Admission form 2024-25</h4></center>
+          <center><h4>Madrasathulfurqan international online Madrassa Admission form 2025-26</h4></center>
             <table style="border-collapse: collapse; width: 100%;">
             <thead>
                 <tr style="background-color: #000000;">
